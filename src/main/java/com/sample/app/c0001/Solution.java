@@ -4,6 +4,11 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 
+ * 两数之和
+ *
+ */
 public class Solution {
 	
 	public static int[] method1(int[] nums, int target) {

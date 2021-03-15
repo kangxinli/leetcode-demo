@@ -1,5 +1,10 @@
 package com.sample.app.c0003;
 
+/**
+ * 
+ * 	无重复字符的最长子串
+ *
+ */
 public class Solution {
 	
 	public static int lengthOfLongestSubstring(String s) {
