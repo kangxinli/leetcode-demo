@@ -1,5 +1,7 @@
 package com.sample.app.c0019;
 
+import com.sample.app.entity.ListNode;
+
 public class Solution {
 
 	// 递归解法
@@ -19,31 +21,13 @@ public class Solution {
 		return m + 1;
 	}
 
-	public static ListNode getNode(int[] nums) {
-		ListNode root = new ListNode(nums[0]);
-		ListNode cursor = root;
-		for (int i = 1; i <= nums.length - 1; i++) {
-			ListNode numNode = new ListNode(nums[i]);
-			cursor.next = numNode;
-			cursor = numNode;
-		}
-		return root;
-	}
-
 	public static void main(String[] args) {
 		int[] n1 = {1, 2};
-		ListNode l1 = getNode(n1);
+		ListNode l1 = ListNode.getNode(n1);
 
 		ListNode result = removeNthFromEnd(l1, 1);
 		
-		print(result);
+		ListNode.print(result);
 	}
 	
-	public static void print(ListNode node) {
-		while(node != null) {
-			System.out.print(node.val);
-			node = node.next;
-		}
-	}
-
 }

@@ -1,5 +1,7 @@
 package com.sample.app.c0002;
 
+import com.sample.app.entity.ListNode;
+
 /**
  * 
  * 两数相加 
@@ -28,35 +30,17 @@ public class Solution {
         return root.next;
     }
 	
-	public static ListNode getNode(int[] nums) {
-		ListNode root = new ListNode(nums[0]);
-		ListNode cursor = root;
-		for (int i = 1; i <= nums.length - 1; i++) {
-			ListNode numNode = new ListNode(nums[i]);
-			cursor.next = numNode;
-            cursor = numNode;
-		}
-		return root;
-	}
-
 	public static void main(String[] args) {
 		int[] n1 = {9,9,9,9,9,9,9};
-		ListNode l1 = getNode(n1);
+		ListNode l1 = ListNode.getNode(n1);
 		
 		
 		int[] n2 = {9,9,9,9};
-		ListNode l2 = getNode(n2);
+		ListNode l2 = ListNode.getNode(n2);
 		
 		ListNode result = addTwoNumbers(l1, l2);
 		
-		print(result);
+		ListNode.print(result);
 	}
 	
-	public static void print(ListNode node) {
-		while(node != null) {
-			System.out.print(node.val);
-			node = node.next;
-		}
-	}
-
 }
