@@ -14,8 +14,6 @@ public class Solution1 {
             return res;
         }
 
-        // Stack 这个类 Java 的文档里推荐写成 Deque<Integer> stack = new ArrayDeque<Integer>();
-        // 注意：只使用 stack 相关的接口
         Deque<String> stack = new ArrayDeque<>();
         char[] charArray = s.toCharArray();
         dfs(charArray, 0, len, stack, res);
